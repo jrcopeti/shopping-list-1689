@@ -1,4 +1,7 @@
 function Footer({ items }) {
+  if (!items.length) {
+    return <p className="no-items"> No items on the list</p>;
+  }
   const totalItems = items.length;
 
   const totalQuantity = items.reduce(

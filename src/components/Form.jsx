@@ -9,6 +9,7 @@ function Form({ handleAddItem }) {
     const descriptionTrimmed = description.trim();
     if (!descriptionTrimmed) {
       alert("Please, enter an item");
+      return;
     }
 
     const newItem = {
@@ -19,8 +20,8 @@ function Form({ handleAddItem }) {
     };
 
     handleAddItem(newItem);
-    setQuantity(1)
-    setDescription("")
+    setQuantity(1);
+    setDescription("");
   };
 
   return (
