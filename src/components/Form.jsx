@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Form() {
+function Form({ handleAddItem }) {
   const [quantity, setQuantity] = useState(1);
   const [description, setDescription] = useState("");
 
@@ -18,9 +18,11 @@ function Form() {
       id: crypto.randomUUID(),
     };
 
-    console.log(newItem);
+    handleAddItem(newItem);
+    setQuantity(1)
+    setDescription("")
   };
-  console.log(description);
+
   return (
     <form onSubmit={handleSubmit} className="add-form">
       <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
