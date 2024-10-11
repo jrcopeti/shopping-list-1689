@@ -1,11 +1,4 @@
 function List({ items, handleToggleItems, handleDeleteItems }) {
-  // console.log("items in List", items);
-  // const updated = items.map((item) => {
-  //   console.log(item.bought);
-  // });
-  // console.log("items in list", items);
-  console.log(items);
-
   return (
     <div className="list">
       <ul>
